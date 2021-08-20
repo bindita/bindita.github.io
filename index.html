@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bindita Chaudhuri - Homepage</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+	<style>
+	.button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	border-radius: 8px;
+	cursor: pointer;
+	}
+	.button:hover {background-color: #3e8e41}
+	.button:focus {outline: 0}
+	
+	/* The Modal (background) */
+	.modal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 100px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content */
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: auto;
+	  padding: 20px;
+	  border: 1px solid #888;
+	  width: 80%;
+	}
+	
+	/* The Close Button */
+	.close {
+	  color: #aaaaaa;
+	  float: right;
+	  font-size: 28px;
+	  font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	  color: #000;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+	
+	.monospace{
+		font-family: "Lucida Console", Courier, monospace;
+	}
+	</style>
+  </head>
+  <body id="top">
+    <header>
+      <div class="profile-page sidebar-collapse">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+          <div class="container">
+            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Bindita Chaudhuri</a>
+              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#publications">Publications</a></li>
+				<li class="nav-item"><a class="nav-link smooth-scroll" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="page-content">
+      <div>
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('images/seattle.jpg');"></div>
+      <div class="container">
+        <div class="content-center">
+          <div class="cc-profile-image"><a href="#"><img src="images/bindita.jpg" alt="Image"/></a></div>
+          <div class="h2 title">Bindita Chaudhuri</div>
+          <div class="title">Ph.D. student, Computer vision and graphics<br>Paul G. Allen School of Computer Science & Engineering<br>University of Washington, Seattle</div><a class="btn btn-primary" target="_blank" href="https://homes.cs.washington.edu/~bindita/Resume_Bindita.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="button-container">
+		  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="https://www.facebook.com/bindita.chaudhuri" rel="tooltip" title="Go to my Facebook page"><i class="fa fa-facebook"></i></a>
+		  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="http://in.linkedin.com/in/binditachaudhuri" rel="tooltip" title="Go to my LinkedIn page"><i class="fa fa-linkedin"></i></a>
+		  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="https://github.com/bindita" rel="tooltip" title="Go to my Github page"><i class="fa fa-github"></i></a>
+		  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="https://scholar.google.com/citations?user=I-J7QXsAAAAJ&hl=en" rel="tooltip" title="Go to my Google Scholar page"><i class="fa fa-google"></i></a>
+		  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="https://sites.google.com/site/binditachaudhuri/" rel="tooltip" title="Go to my personal webpage"><i class="fa fa-globe"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="about">
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">About</div>
+            <p>Hello! I am a Research Scientist in the AI on Device team at Facebook Reality Labs.
+			I recently completed my Ph.D. in Computer Science and Engineering from University of Washington under the guidance of  
+			Prof. <a target="_blank" style="text-decoration:none" href=https://homes.cs.washington.edu/~shapiro/>Linda Shapiro</a> (<a target="_blank" style="text-decoration:none" href="http://grail.cs.washington.edu/"><i>GRAIL</i></a>) and Dr.
+			<a target="_blank" style="text-decoration:none" href="http://www.colburn.org">Alex Colburn</a> (<i>Apple</i>). Previously, I completed my Masters in Electrical Engineering 
+			from <a target="_blank" style="text-decoration:none" href=http://iitb.ac.in/>Indian Institute of Technology Bombay</a> under the guidance of 
+			Prof. <a target="_blank" style="text-decoration:none"  href=https://www.ee.iitb.ac.in/~sc/>Subhasis Chaudhuri</a> and received my Bachelors 
+			in Electronics and Telecommunication Engineering from <a target="_blank" style="text-decoration:none" href=http://www.jaduniv.edu.in/>Jadavpur University</a> 
+			under the guidance of Prof. <a target="_blank" style="text-decoration:none"  href=http://www.jaduniv.edu.in/profile.php?uid=357/>Iti Saha Misra</a>.
+			<!--I also collaborate with <a target="_blank" style="text-decoration:none" href="http://www.colburn.org">Alex Colburn</a>, 
+			<a target="_blank" style="text-decoration:none" href="https://homes.cs.washington.edu/~mones/biography.html">Barbara Mones</a> 
+			and <a target="_blank" style="text-decoration:none" href="http://www.garyfaigin.com/">Gary Faigin</a>.-->
+
+            <p>My research interests are in the fields of computer vision, computer graphics and machine learning, focusing on photorealistic 3D human modeling for immersive AR/VR storytelling and virtual communication.
+			My PhD thesis was on human facial expression modeling using deep learning frameworks and real-time facial motion retargeting from 2D images to 3D characters.
+			During my PhD, I also got the opportunity to work on a variety of exciting projects as a research intern at
+			<a target="_blank" href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, 
+			<a target="_blank" href="https://tech.fb.com/ar-vr/">Facebook Reality Labs</a> and
+			<a target="_blank" href="https://www.intel.com/content/www/us/en/research/overview.html">Intel Labs</a>.</p>
+			
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="section" id="skill">
+  <div class="container">
+    <div class="h4 text-center mb-4 title">Professional Skills</div>
+    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">HTML</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">CSS</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value">75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">JavaScript</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">SASS</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">Bootstrap</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value">75%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="progress-container progress-primary"><span class="progress-badge">Photoshop</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">70%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<div class="section" id="experience">
+  <div class="container cc-experience">
+    <div class="h4 text-center mb-4 title">Work Experience</div>
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/frl_new_new.png" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="100" width="120">
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="h5">Research Scientist (<i>July 2021 - present</i>)</div>
+            <p class="category">AI on Device team, Facebook Reality Labs (Redmond, WA)</p>
+            <p> Computational Photography and Image Processing for AR </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/frl_new.png" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="100" width="100">
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="h5">Research Intern (<i>Summer 2020</i>)</div>
+            <p class="category">Virtual Humans team, Facebook Reality Labs Research (Sausalito, CA)</p>
+            <p> Photorealistic texture synthesis for 3D humans </p>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/ms.png" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="100" width="200">
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="h5">Research Contractor (<i>Jan 2019 - May 2020</i>)</div>
+            <p class="category">AI Perception and Mixed Reality Platform team, Microsoft Cloud &amp AI (Redmond, WA)</p>
+            <p> Personalized face modeling for high-fidelity 3D reconstruction and improved 3D tracking and retargeting from 2D images.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/msr.png" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="100" width="200">
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="h5">Research Intern (<i>Summer 2018</i>)</div>
+            <p class="category">Visual Intelligence group, Microsoft Research (Redmond, WA)</p>
+            <p> Real-time multi-task deep learning framework to transfer performance of human face(s) from 2D images to 3D animated characters</p>
+			<p> <font color="red">Integrated in Puppets feature of Swiftkey!</font>
+			<!--[<a target="_blank" style="text-decoration:none" href="https://blog.swiftkey.com/share-videos-of-yourself-as-3d-animals-on-android/?fbclid=IwAR10takSV34EkaWI0DYeKvrerHSWoerfqQ8dTyzXOPkf9K8Qe6Jje5brgoY"><b>Blog post</b></a>]-->
+			[<a target="_blank" style="text-decoration:none" href="https://news.microsoft.com/en-gb/2019/07/04/panda-cat-dog-owl-or-dinosaur-swiftkey-can-turn-you-into-a-cute-animal-when-you-message-friends/"><b>Media report</b></a>]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/intel.jpeg" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="96" width="96">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Graduate Intern Technical (<i>Summer 2017</i>)</div>
+            <p class="category">Computational Imaging Lab, Intel Labs (Santa Clara, CA)</p>
+            <p> Deep optical flow prediction and image super-resolution for efficient view synthesis from high-definition multi-camera array images.</p>
+			<p> <font color="red">US patent granted! </font> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3" >
+          <div class="card-body">
+            <img src="images/trento.jpg" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="64" width="384">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Visiting Researcher (<i>Summer 2015</i>)</div>
+            <p class="category">Department of Information Engineering and Computer Science, University of Trento (Trento, Italy)</p>
+            <p> Novel unsupervised and semi-supervised approaches to content-based retrieval of remote sensing images using an inexact graph matching strategy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3" >
+          <div class="card-body">
+            <img src="images/cselogo.png" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="30" width="400">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Teaching Assistant (<i>September 2014 - Present</i>)</div>
+            <p class="category">University of Washington and IIT Bombay</p>
+            <p> Courses taught: Computer Vision, Artificial Intelligence, Algorithms, Compilers, Digital Signal Processing, Digital Communications</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="publications">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">Publications</div>
+	
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="cvpr2021.png" width="100%">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Semi-supervised Synthesis of High-Resolution Editable Textures for 3D Humans</div>
+            <p class="category">
+			<a target="_blank" href="humantexturesynthesis.html"><button class="button"><i class="fa fa-globe"></i> Webpage</button></a>&nbsp;&nbsp;
+			<a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chaudhuri_Semi-Supervised_Synthesis_of_High-Resolution_Editable_Textures_for_3D_Humans_CVPR_2021_paper.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp;
+			<button class="button" onclick="document.getElementById('cvpr21bibtexmodal').style.display='block'"><i class="fa fa-quote-right"></i> Bibtex</button>
+			</p>
+            <p><b>Bindita Chaudhuri</b>, Nikolaos Sarafianos, Linda Shapiro, Tony Tung</p><p><i>IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>)</i>, <b>2021</b> <br> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="cvpr21bibtexmodal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="document.getElementById('cvpr21bibtexmodal').style.display='none'">&times;</span>
+		<p class="monospace"><pre>
+@INPROCEEDINGS{3Dhumantexturesynthesis,
+author={Bindita Chaudhuri and Nikolaos Sarafianos and Linda Shapiro and Tony Tung},
+title={Semi-supervised Synthesis of High-Resolution Editable Textures for 3D Humans},
+booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+year={2021}
+}</pre></p>
+	  </div>
+	</div>
+	
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="eccv2020webpage/eccv.gif" width="100%">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Personalized Face Modeling for Improved Face Reconstruction and Motion Retargeting</div>
+            <p class="category">
+			<a target="_blank" href="personalizedfacemodeling.html"><button class="button"><i class="fa fa-globe"></i> Webpage</button></a>&nbsp;&nbsp;
+			<a target="_blank" href="eccv2020webpage/personalizedfacemodeling.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp;
+			<button class="button" onclick="document.getElementById('eccvbibtexmodal').style.display='block'"><i class="fa fa-quote-right"></i> Bibtex</button>
+			</p>
+            <p><b>Bindita Chaudhuri</b>, Noranart Vesdapunt, Linda Shapiro, Baoyuan Wang</p><p><i>IEEE European Conference on Computer Vision (<b>ECCV</b>)</i>, <b>2020</b> <font color="red">Spotlight!</font><br> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="eccvbibtexmodal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="document.getElementById('eccvbibtexmodal').style.display='none'">&times;</span>
+		<p class="monospace"><pre>
+@INPROCEEDINGS{PersonalizedFaceModeling,
+author={Bindita Chaudhuri and Noranart Vesdapunt and Linda Shapiro and Baoyuan Wang},
+title={Personalized Face Modeling for Improved Face Reconstruction and Motion Retargeting},
+booktitle={IEEE European Conference on Computer Vision (ECCV)},
+year={2020}
+}</pre></p>
+	  </div>
+	</div>
+	
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/cvpr19.png" height="120" width="400">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Joint Face Detection and Facial Motion Retargeting for Multiple Faces</div>
+            <p class="category">
+			<a target="_blank" href="multifaceretargeting.html"><button class="button"><i class="fa fa-globe"></i> Webpage</button></a>&nbsp;&nbsp;
+			<a target="_blank" href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chaudhuri_Joint_Face_Detection_and_Facial_Motion_Retargeting_for_Multiple_Faces_CVPR_2019_paper.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp;
+			<button class="button" onclick="document.getElementById('cvprbibtexmodal').style.display='block'"><i class="fa fa-quote-right"></i> Bibtex</button>
+			</p>
+            <p><b>Bindita Chaudhuri</b>, Noranart Vesdapunt, Baoyuan Wang</p><p><i>IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>)</i>, <b>2019</b><br> <!--[<a target="_blank" style="text-decoration:none" href="https://homes.cs.washington.edu/~deepalia/expProject.htm">webpage</a>]--></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="cvprbibtexmodal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="document.getElementById('cvprbibtexmodal').style.display='none'">&times;</span>
+		<p class="monospace"><pre>
+@INPROCEEDINGS{MultiFaceRetarget,
+author={Bindita Chaudhuri and Noranart Vesdapunt and Baoyuan Wang},
+title={Joint Face Detection and Facial Motion Retargeting for Multiple Faces},
+booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+year={2019}
+}</pre></p>
+	  </div>
+	</div>
+	
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/gesturecalcproject.gif" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="150" width="100">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">GestureCalc: An Eyes-Free Calculator for Touch Screens</div>
+            <p class="category">
+			<a target="_blank" href="papers/gesturecalc_assets19.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp;
+			<button class="button" onclick="document.getElementById('assetsbibtexmodal').style.display='block'""><i class="fa fa-quote-right"></i> Bibtex</button>&nbsp;&nbsp;
+			<a target="_blank" href="images/gesturecalcproject.mp4"><button class="button"><i class="fa fa-video-camera"></i> Demo</button></a>&nbsp;&nbsp;
+			<a target="_blank" href="papers/gesturecalc_assets19_demo.pdf"><button class="button"><i class="fa fa-file-video-o"></i> Demo paper</button></a>
+			</p>
+            <p><b>Bindita Chaudhuri*</b>, Leah Perlmutter*, Justin Petelka, Philip Garrison, James Fogarty, Jacob Wobbrock, Richard Ladner (* equal contribution)</p><p><i>ACM SIGACCESS Conference on Computers & Accessibility (<b>ASSETS</b>)</i>, <b>2019</b><br> <!--[<a target="_blank" style="text-decoration:none" href="https://homes.cs.washington.edu/~deepalia/expProject.htm">webpage</a>]--></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="assetsbibtexmodal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="document.getElementById('assetsbibtexmodal').style.display='none'">&times;</span>
+		<p class="monospace"><pre>
+@inproceedings{Gesturecalc:Assets2019,
+ author = {Chaudhuri, Bindita and Perlmutter, Leah and Petelka, Justin and Garrison, Philip 
+ and Fogarty, James and Wobbrock, Jacob O. and Ladner, Richard E.},
+ title = {GestureCalc: An Eyes-Free Calculator for Touch Screens},
+ booktitle = {Proceedings of the 21st International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)},
+ year = {2019},
+ pages = {},
+ numpages = {12},
+ publisher = {ACM}
+}</pre></p>
+	  </div>
+	</div>
+
+	
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/intel.gif" height="120" width="400">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">View Interpolation of Multi-Camera Array Images with Flow Estimation and Image Super Resolution using Deep Learning</div>
+            <p class="category"><a target="_blank" href="https://patentimages.storage.googleapis.com/6f/5e/89/9dab9905948e72/US10547823.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a></p>
+            <p><b>Bindita Chaudhuri</b>, Fan Zhang, Oscar Nestares</p><p><i>US Patent 10,547,823</i>, <b>2020</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/wacv.gif" height="100" width="400">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Learning to Generate 3D Stylized Character Expressions from Humans</div>
+            <p class="category">
+			<a target="_blank" href="http://grail.cs.washington.edu/projects/deepexpr/"><button class="button"><i class="fa fa-globe"></i> Webpage</button></a>&nbsp;&nbsp;
+			<a target="_blank" href="papers/2Dto3Dexpr_WACV.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp;
+			<button class="button" onclick="document.getElementById('wacvbibtexmodal').style.display='block'"><i class="fa fa-quote-right"></i> Bibtex</button>&nbsp;&nbsp;
+			<a target="_blank" href="http://grail.cs.washington.edu/projects/deepexpr/ferg-3d-db.html"><button class="button"><i class="fa fa-code"></i> Code/Data</button> <font color="red">New!</font></a>
+			</p>
+            <p>Deepali Aneja, <b>Bindita Chaudhuri</b>, Alex Colburn, Gary Faigin, Linda Shapiro and Barbara Mones<p></p><i>IEEE Winter Conference on Applications of Computer Vision (<b>WACV</b>)</i>, <b>2018</b></p>
+			<p><b>People's Choice Award!</b> [<a target="_blank" href="https://news.cs.washington.edu/2017/11/16/allen-school-and-madrona-venture-group-celebrate-student-innovation-at-annual-research-day/"><b>Allen School News</b></a>] [<a target="_blank" style="text-decoration:none" href="https://www.geekwire.com/2017/university-washingtons-computer-science-clout-full-display-annual-student-showcase-event/"><b>Geekwire article</b></a>]
+			<p> 
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="wacvbibtexmodal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="document.getElementById('wacvbibtexmodal').style.display='none'">&times;</span>
+		<p class="monospace"><pre>
+@INPROCEEDINGS{exprgen:wacv2018, 
+author={D. {Aneja} and B. {Chaudhuri} and A. {Colburn} and G. {Faigin} and L. {Shapiro} and B. {Mones}}, 
+booktitle={IEEE Winter Conference on Applications of Computer Vision (WACV)}, 
+title={Learning to Generate 3D Stylized Character Expressions from Humans}, 
+year={2018},
+pages={160-169},
+month={March}
+}</pre></p>
+	  </div>
+	</div>
+	
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/tgrs.png" height="200" width="500">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Multi-label Remote Sensing Image Retrieval using a Semi-Supervised Graph-Theoretic Method</div>
+            <p class="category">
+			<a target="_blank" href="papers/08089668_TGRS.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp;
+			<button class="button" onclick="document.getElementById('tgrsbibtexmodal').style.display='block'"><i class="fa fa-quote-right"></i> Bibtex</button>&nbsp;&nbsp;
+			<a target="_blank" href="http://bigearth.eu/datasets"><button class="button"><i class="fa fa-database"></i> Dataset</button></a>
+			</p>
+            <p><strong>Bindita Chaudhuri</strong>, Beg&uuml;m Demir, Lorenzo Bruzzone and Subhasis Chaudhuri<p></p><i>IEEE Transactions on Geoscience and Remote Sensing (<b>TGRS</b>)</i>, vol. 56, no. 2, pp. 1144-1158, Feb <b>2018</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="tgrsbibtexmodal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="document.getElementById('tgrsbibtexmodal').style.display='none'">&times;</span>
+		<p class="monospace"><pre>
+@ARTICLE{multilabel:tgrs2018, 
+author={B. {Chaudhuri} and B. {Demir} and S. {Chaudhuri} and L. {Bruzzone}}, 
+journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+title={Multilabel Remote Sensing Image Retrieval Using a Semisupervised Graph-Theoretic Method}, 
+year={2018}, 
+volume={56}, 
+number={2}, 
+pages={1144-1158}, 
+month={Feb}
+}</pre></p>
+	  </div>
+	</div>
+	
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/grsl.png" height="128" width="512">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Region-Based Retrieval of Remote Sensing Images using an Unsupervised Graph-Theoretic Approach</div>
+            <p class="category">
+			<a target="_blank" href="papers/07484332_GRSL.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp;
+			<button class="button" onclick="document.getElementById('grslbibtexmodal').style.display='block'"><i class="fa fa-quote-right"></i> Bibtex</button>
+			</p>
+            <p><strong>Bindita Chaudhuri</strong>, Beg&uuml;m Demir, Lorenzo Bruzzone and Subhasis Chaudhuri</p><p><i>IEEE Geoscience and Remote Sensing Letters (<b>GRSL</b>)</i>, vol. 13, no. 7, pp. 987-991, July <b>2016</b><br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="grslbibtexmodal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="document.getElementById('grslbibtexmodal').style.display='none'">&times;</span>
+		<p class="monospace"><pre>
+@ARTICLE{regionbasedRSIR:grsl2016, 
+author={B. {Chaudhuri} and B. {Demir} and L. {Bruzzone} and S. {Chaudhuri}}, 
+journal={IEEE Geoscience and Remote Sensing Letters}, 
+title={Region-Based Retrieval of Remote Sensing Images Using an Unsupervised Graph-Theoretic Approach}, 
+year={2016}, 
+volume={13}, 
+number={7}, 
+pages={987-991},
+month={July}
+}</pre></p>
+	  </div>
+	</div>
+	
+  </div>
+</div>
+
+<script>
+	var modal = document.getElementsByClassName("modal");
+	var span = document.getElementsByClassName("close");
+	
+	window.onclick = function(event) {
+	  if (event.target == modal[0]) {
+		modal[0].style.display = "none";
+	  }
+	  if (event.target == modal[1]) {
+		modal[1].style.display = "none";
+	  }
+	  if (event.target == modal[2]) {
+		modal[2].style.display = "none";
+	  }
+	  if (event.target == modal[3]) {
+		modal[3].style.display = "none";
+	  }
+	  if (event.target == modal[4]) {
+		modal[4].style.display = "none";
+	  }
+	  if (event.target == modal[5]) {
+		modal[5].style.display = "none";
+	  }
+	  if (event.target == modal[6]) {
+		modal[6].style.display = "none";
+	  }
+	}
+</script>
+
+<div class="section" id="projects">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">Projects</div>
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/roboticsproject.gif" height="120" width="400">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Local Collision Avoidance using Laser Sensors for a Nano-Drone</div>
+            <p class="category">
+			<a target="_blank"href="images/roboticsproject.mp4"><button class="button"><i class="fa fa-video-camera"></i> Video</button></a></p>
+            <p>Bindita Chaudhuri, Chung-Yi Weng, Melanie Anderson<br><i>Robotics (UW CSE 571) Project, 2019</i><br> <!--[<a target="_blank" style="text-decoration:none" href="https://homes.cs.washington.edu/~deepalia/expProject.htm">webpage</a>]--></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+	<div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/gesturecalcproject.gif" style="position: relative; display: inline-block; left: 50%; transform: translate(-50%);" height="150" width="100">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Gesture-based digital calculator for non-visual entry on touchscreen devices</div>
+            <p class="category">[<a target="_blank" style="text-decoration:none" href="https://homes.cs.washington.edu/~bindita/images/gesturecalcproject.mp4">video</a>]</p>
+            <p>Bindita Chaudhuri*, Leah Perlmutter*, Philip Garrison, Justin Petelka, Luc Haller (*equal contribution)<br><i>Human-Computer Interaction (UW CSE 510) Project, 2018</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	-->
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-body">
+            <img src="images/videoiitbproject.gif" height="150" width="300">
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Stabilization and Real-time Object Tracking in Videos</div>
+            <p class="category">
+			<a target="_blank" href="images/videoiitbproject.mp4"><button class="button"><i class="fa fa-video-camera"></i> Video</button></a></p>
+            <p>Bindita Chaudhuri, Heena Gupta, Sania Qamar<br><i>Computer Vision (IITB CS 763) Project, 2015</p>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+</div>
+<!--<div class="section" id="reference">
+  <div class="container cc-reference">
+    <div class="h4 mb-4 text-center title">References</div>
+    <div class="card" data-aos="zoom-in">
+      <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
+          <li data-target="#cc-Indicators" data-slide-to="1"></li>
+          <li data-target="#cc-Indicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="images/reference-image-1.jpg" alt="Image"/>
+                <div class="h5 pt-2">Aiyana</div>
+                <p class="category">CEO / WEBM</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus nisl nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="images/reference-image-2.jpg" alt="Image"/>
+                <div class="h5 pt-2">Braiden</div>
+                <p class="category">CEO / Creativem</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus nisl nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="images/reference-image-3.jpg" alt="Image"/>
+                <div class="h5 pt-2">Alexander</div>
+                <p class="category">CEO / Webnote</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus nisl nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<div class="section" id="contact">
+  <div class="cc-contact-information"><!-- style="background-image: url('images/staticmap.png');"> -->
+    <div class="container">
+      <div class="cc-contact">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card mb-0" data-aos="zoom-in">
+              <div class="h4 text-center title">Contact Me</div>
+              <div class="row">
+                <!-- <div class="col-md-6">
+                  <div class="card-body">
+                    <form action="https://formspree.io/your@email.com" method="POST">
+                      <div class="p pb-3"><strong>Feel free to contact me </strong></div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
+                            <input class="form-control" type="text" name="name" placeholder="Name" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
+                            <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <button class="btn btn-primary" type="submit">Send</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div> -->
+                <div class="col-md-12">
+                  <div class="card-body text-center">
+                    <p class="mb-0"><strong>Address </strong></p>
+                    <p class="pb-2">CSE 482, Paul G. Allen Center<br>185 Stevens Way, Seattle, WA 98195</p></p>
+                    <p class="mb-0"><strong>Email</strong></p>
+                    <p>bindita@cs.washington.edu <a target="_blank" style="text-decoration:none" title="Send me an email" href="mailto:bindita@cs.washington.edu?Subject=Hello" class="fa fa-envelope"></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div></div>
+    </div>
+    <footer class="footer">
+      <div class="container text-center">
+	  <a class="cc-facebook btn btn-link" target="_blank" href="https://www.facebook.com/bindita.chaudhuri"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
+	  <a class="cc-facebook btn btn-link " target="_blank" href="http://in.linkedin.com/in/binditachaudhuri"><i class="fa fa-linkedin fa-2x " aria-hidden="true"></i></a>
+	  <a class="cc-facebook btn btn-link" target="_blank" href="https://github.com/bindita"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+	  <a class="cc-facebook btn btn-link" target="_blank" href="https://scholar.google.com/citations?user=I-J7QXsAAAAJ&hl=en"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a>
+	  <a class="cc-facebook btn btn-link" target="_blank" href="https://sites.google.com/site/binditachaudhuri/"><i class="fa fa-globe fa-2x " aria-hidden="true"></i></a>
+	  </div>
+      <div class="text-center text-muted">
+        <p>&copy; Creative CV. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/core/jquery.3.2.1.min.js"></script>
+    <script src="js/core/popper.min.js"></script>
+    <script src="js/core/bootstrap.min.js"></script>
+    <script src="js/now-ui-kit.js?v=1.1.0"></script>
+    <script src="js/aos.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
