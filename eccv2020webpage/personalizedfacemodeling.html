@@ -1,1 +1,394 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		        15px 15px 0 0px #fff, /* The fourth layer */
+		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		        20px 20px 0 0px #fff, /* The fifth layer */
+		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		        25px 25px 0 0px #fff, /* The fifth layer */
+		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+	
+	.button {
+	background-color: #1367a7;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 15px;
+	cursor: pointer;
+	}
+	.button:hover {background-color: #208799}
+	.button:focus {outline: 0}
+	
+	/* The Modal (background) */
+	.modal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 100px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content */
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: auto;
+	  padding: 20px;
+	  border: 1px solid #888;
+	  width: 80%;
+	}
+	
+	/* The Close Button */
+	.close {
+	  color: #aaaaaa;
+	  float: right;
+	  font-size: 28px;
+	  font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	  color: #000;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+	
+	.monospace{
+		font-family: "Lucida Console", Courier, monospace;
+	}
+</style>
+
+<html>
+  <head>
+		<title>Personalized Face Modeling</title>
+		<meta property="og:image" content=""/>
+		<meta property="og:title" content="Personalized Face Modeling" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <br>
+          <center>
+          	<span style="font-size:40px">Personalized Face Modeling for Improved Face<br>Reconstruction and Motion Retargeting</span><br><br>
+			<span style="font-size:25px"><b>ECCV 2020 (Spotlight)</b></span><br><br>
+	  		  <table align=center width="100%">
+	  			  <tr>
+	  	              <td align=center width="25%">
+	  					<center>
+	  						<span style="font-size:24px"><a target="_blank" href="https://homes.cs.washington.edu/~bindita/">Bindita Chaudhuri</a><sup>1</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width="25%">
+	  					<center>
+	  						<span style="font-size:24px"><a target="_blank" href="http://noranart.com/">Noranart Vesdapunt</a><sup>2</sup></span>
+		  		  		</center>
+		  		  	  </td>
+					  <td align=center width="25%">
+	  					<center>
+	  						<span style="font-size:24px"><a target="_blank" href="https://homes.cs.washington.edu/~shapiro/">Linda Shapiro</a><sup>1</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width="25%">
+	  					<center>
+	  						<span style="font-size:24px"><a target="_blank" href="https://sites.google.com/site/zjuwby">Baoyuan Wang</a><sup>2</sup></span>
+		  		  		</center>
+		  		  	  </td>
+			  </table>
+          		<!-- <span style="font-size:30px">ECCV 2016.</span> -->
+
+	  		  <table align=center width=800px>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:18px"><b><sup>1</sup> University of Washington &nbsp;&nbsp;&nbsp; <sup>2</sup> Microsoft Cloud and AI</b>
+		  		  		</center>
+		  		  	  </td>
+		  		  	 </tr>
+			  </table>
+          </center>
+
+		<br><hr><br>
+		
+		<table align=center width=800px>
+			  <tr>
+				  <td><span style="font-size:20pt">
+				  <center>
+					<!--<span style="font-size:17.5px"><font color="red">Coming soon!</font></span><br><br>-->
+				  	<a target="_blank" href="https://bindita.github.io/personalizedfacemodeling.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a>&nbsp;&nbsp; 
+					<a target="_blank" href="https://bindita.github.io/personalizedfacemodeling_supp.pdf"><button class="button"><i class="fa fa-file-o"></i> Supplementary</button></a> &nbsp;&nbsp; 
+					<a target="_blank" href="https://arxiv.org/abs/2007.06759"><button class="button"><i class="fa fa-external-link"></i> arXiv</button></a> &nbsp;&nbsp;
+					<!--<a target="_blank" href=""><button class="button"><i class="fa fa-file"></i> Presentation</button></a> &nbsp;&nbsp;-->
+					<button class="button" id="bibtex"><i class="fa fa-quote-right"></i> Bibtex</button>
+  	              </center>
+				  </td>
+              </tr>
+  		  </table>
+		  <br>
+		  <table align=center width=800px>
+			  <tr>
+				  <td><span style="font-size:20pt">
+				  <center>
+					<a target="_blank" href="https://bindita.github.io/personalizedfacemodeling_short.mp4"><button class="button"><i class="fa fa-video-camera"></i> Short video</button></a>&nbsp;&nbsp; 
+					<a target="_blank" href="https://bindita.github.io/personalizedfacemodeling_short.pdf"><button class="button"><i class="fa fa-file-movie-o"></i> Short video slides</button></a> &nbsp;&nbsp; 
+					<a target="_blank" href="https://bindita.github.io/personalizedfacemodeling_long.mp4"><button class="button"><i class="fa fa-video-camera"></i> Long video</button></a> &nbsp;&nbsp;
+					<a target="_blank" href="https://bindita.github.io/personalizedfacemodeling_long.pdf"><button class="button"><i class="fa fa-file-movie-o"></i> Long video slides</button></a>
+					<!--<button class="button" id="bibtex"><i class="fa fa-quote-right"></i> Bibtex</button>-->
+  	              </center>
+				  </td>
+              </tr>
+  		  </table>
+		  <br><br><center> Unfortunately, we won't be able to release our code since some parts of the code belongs to Microsoft's confidential property. </center>
+		  
+		  <!-- The Modal -->
+			<div id="myModal" class="modal">
+			  <!-- Modal content -->
+			  <div class="modal-content">
+				<span class="close" >&times;</span>
+				<p class="monospace">
+				@INPROCEEDINGS{PersonalizedFaceModeling, <br>
+				author={Bindita Chaudhuri and Noranart Vesdapunt and Linda Shapiro and Baoyuan Wang}, <br>
+				title={Personalized Face Modeling for Improved Face Reconstruction and Motion Retargeting},<br>
+				booktitle={IEEE European Conference on Computer Vision (ECCV)}, <br>
+				year={2020}<br>
+				}</p>
+			  </div>
+			</div>
+
+			<script>
+			var modal = document.getElementById("myModal");
+			var btn = document.getElementById("bibtex");
+			var span = document.getElementsByClassName("close")[0];
+
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
+			
+		  <br><hr><br>
+		
+		
+  		  <table align=center width=900px>
+  			  <tr>
+  	              <td width=250px>
+  					<center>
+  	                	<img class="rounded" src = "https://bindita.github.io/method.png" width="90%"></img></href></a><br>
+					</center>
+  	              </td>
+                </tr>
+  	              <td width=250px>
+  					<center>
+  	                	<span style="font-size:15px"><i><b>Our end-to-end framework</b>. Our framework takes frames from in-the-wild video(s) of a
+						user as input and generates per-frame tracking parameters via the TrackNet and personalized face
+						model of the user via the ModelNet. The model and tracking parameters are then combined to
+						obtain 3D reconstruction. The networks are trained together in an end-to-end manner (marked in
+						red) by projecting the reconstructed outputs into 2D using a differentiable renderer and computing
+						multi-image consistency losses and other regularization losses.</i>
+						<br><br> <span style="font-size:15px"><b>Abstract</b></span>
+					</center>
+  	              </td>
+			
+			  <tr>
+	  		  	<td>
+					<p align="justify"><br>
+					Traditional methods for image-based 3D face reconstruction and
+					facial motion retargeting fit a 3D morphable model (3DMM) to the face, which
+					has limited modeling capacity and fail to generalize well to in-the-wild data.
+					Use of deformation transfer or multilinear tensor as a personalized 3DMM
+					for blendshape interpolation does not address the fact that facial expressions
+					result in different local and global skin deformations in different persons.
+					Moreover, existing methods learn a single albedo per user which is not enough
+					to capture the expression-specific skin reflectance variations. We propose an
+					end-to-end framework that jointly learns a personalized face model per user and
+					per-frame facial motion parameters from a large corpus of in-the-wild videos
+					of user expressions. Specifically, we learn user-specific expression blendshapes
+					and dynamic (expression-specific) albedo maps by predicting personalized
+					corrections on top of a 3DMM prior. We introduce novel training constraints to ensure that
+					the corrected blendshapes retain their semantic meanings and the reconstructed
+					geometry is disentangled from the albedo. Experimental results show that our
+					personalization accurately captures fine-grained facial dynamics in a wide range
+					of conditions and efficiently decouples the learned face model from facial motion,
+					resulting in more accurate face reconstruction and facial motion retargeting
+					compared to state-of-the-art methods.
+				</p>
+				</td>
+	  		  </tr>
+
+  		  </table>
+		  <br><hr><br>
+		  
+  	  	<center><h1>Results for Images</h1>
+		<center>
+			<img class="rounded" src = "https://bindita.github.io/results.png" width="90%"></img></a><br>
+			<img class="rounded" src = "https://bindita.github.io/moreresults.png" width="90%"></img></a><br>
+		</center>
+		<center>
+			<span style="font-size:17.5px"><i><b>Qualitative results of our method</b>. Our modeling network accurately captures
+			high-fidelity facial details specific to the user, thereby enabling the tracking network to better learn
+			user-independent facial motion. Our network can handle a wide variety of expression, head pose, lighting conditions, age, ethnicity, facial hair and makeup etc.</i>
+		</center>
+		<br><br>		
+		<!--
+		<center>
+			<a target="_blank" href="https://homes.cs.washington.edu/~bindita/cvpr2019webpage/multifaceresults.png"><img class="rounded" src = "cvpr2019webpage/multifaceresults.png" height="290px"></img></href></a><br>
+		</center>
+		<center>
+			<span style="font-size:17.5px"><i>Results for images with multiple faces using our multi-scale multi-face retargeting network. Top row: input images with predicted face bounding boxes in green rectangles, bottom row: predicted 3DMM parameters rendered on top of each face in the input images.</i>
+		</center>
+		<br><br>
+		-->
+		<hr>
+		<center><h1>Results for Videos</h1>
+		<iframe width="640" height="360" src="https://bindita.github.io/video.mp4" style="border:none;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br><br>
+		<hr>
+		  	
+  		  <table align=center width=1100px>
+  			  <tr>
+  	              <td width=400px>
+	  		  <center><h1>Acknowledgements</h1></center>
+	  		<p align="justify">We would like to thank Muscle Wu, Zeyu Chen, Wenbin Zhu and other members of the AI Perception team at <a target="_blank" href="https://azure.microsoft.com/en-us/overview/ai-platform/">Microsoft Cloud+AI</a> for their help with the project.
+			We would also like to thank Alex Colburn from <a target="_blank" href="https://grail.cs.washington.edu/">UW Graphics and Imaging Laboratory</a> for his valuable discussions.
+			Thanks to <a target="_blank" href="https://richzhang.github.io/colorization/">https://richzhang.github.io/colorization/</a> for this webpage template.
+			
+			</p>
+		</td>
+			 </tr>
+		</table>
+
+  		  
+
+		<br><br>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75863369-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+              
+</body>
+</html>
+ 
