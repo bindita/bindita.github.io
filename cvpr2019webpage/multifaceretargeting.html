@@ -1,1 +1,443 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		        15px 15px 0 0px #fff, /* The fourth layer */
+		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		        20px 20px 0 0px #fff, /* The fifth layer */
+		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		        25px 25px 0 0px #fff, /* The fifth layer */
+		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+	
+	.button {
+	background-color: #1367a7;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 15px;
+	cursor: pointer;
+	}
+	.button:hover {background-color: #208799}
+	.button:focus {outline: 0}
+	
+	/* The Modal (background) */
+	.modal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 100px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content */
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: auto;
+	  padding: 20px;
+	  border: 1px solid #888;
+	  width: 80%;
+	}
+	
+	/* The Close Button */
+	.close {
+	  color: #aaaaaa;
+	  float: right;
+	  font-size: 28px;
+	  font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	  color: #000;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+	
+	.monospace{
+		font-family: "Lucida Console", Courier, monospace;
+	}
+
+</style>
+
+<html>
+  <head>
+		<title>Multi-Face Retargeting</title>
+		<meta property="og:image" content="https://homes.cs.washington.edu/~bindita/images/cvpr19.png"/>
+		<meta property="og:title" content="Multi-Face Retargeting" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <br>
+          <center>
+          	<span style="font-size:40px">Joint Face Detection and Facial Motion Retargeting<br>for Multiple Faces</span><br><br>
+			<span style="font-size:25px"><b>CVPR 2019</b></span><br><br>
+	  		  <table align=center width=700px>
+	  			  <tr>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:24px"><a target="_blank" href="https://homes.cs.washington.edu/~bindita/">Bindita Chaudhuri</a><sup>1</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:24px"><a target="_blank" href="http://noranart.com/">Noranart Vesdapunt</a><sup>2</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:24px"><a target="_blank" href="https://sites.google.com/site/zjuwby">Baoyuan Wang</a><sup>2</sup></span>
+		  		  		</center>
+		  		  	  </td>
+			  </table>
+          		<!-- <span style="font-size:30px">ECCV 2016.</span> -->
+
+	  		  <table align=center width=800px>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:18px"><b><sup>1</sup> University of Washington &nbsp;&nbsp;&nbsp; <sup>2</sup> Microsoft Cloud and AI</b>
+		  		  		</center>
+		  		  	  </td>
+		  		  	 </tr>
+			  </table>
+          </center>
+
+			<br><hr><br>
+			
+		  <table align=center width=800px>
+			  <tr>
+				  <td><span style="font-size:20pt">
+				  <center>
+				  	<a target="_blank" href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chaudhuri_Joint_Face_Detection_and_Facial_Motion_Retargeting_for_Multiple_Faces_CVPR_2019_paper.pdf"><button class="button"><i class="fa fa-file-pdf-o"></i> PDF</button></a> &nbsp;&nbsp; 
+					<a target="_blank" href="cvpr2019webpage/multifaceretargeting_supp.pdf"><button class="button"><i class="fa fa-file-o"></i> Supplementary</button></a> &nbsp;&nbsp; 
+					<a target="_blank" href="https://arxiv.org/abs/1902.10744"><button class="button"><i class="fa fa-external-link"></i> arXiv</button></a> &nbsp;&nbsp;
+					<a target="_blank" href="cvpr2019webpage/multifaceretargeting_poster.pdf"><button class="button"><i class="fa fa-file"></i> Poster</button></a> &nbsp;&nbsp;
+					<!--<a target="_blank" href="papers/MultiFaceRetarget_CVPR.bib">-->
+					<button class="button" id="bibtex"><i class="fa fa-quote-right"></i> Bibtex</button>
+  	              </center>
+				  </td>
+              </tr>
+  		  </table>
+		  <br><br><center> Unfortunately, we won't be able to release our code since some parts of the code belongs to Microsoft's confidential property. </center>
+		  
+		  <!-- The Modal -->
+			<div id="myModal" class="modal">
+			  <!-- Modal content -->
+			  <div class="modal-content">
+				<span class="close" >&times;</span>
+				<p class="monospace">
+				@INPROCEEDINGS{MultiFaceRetarget,<br>
+				author={Bindita Chaudhuri and Noranart Vesdapunt and Baoyuan Wang}, <br>
+				title={Joint Face Detection and Facial Motion Retargeting for Multiple Faces},<br>
+				booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, <br>
+				year={2019}<br>
+				}</p>
+			  </div>
+			</div>
+
+			<script>
+			var modal = document.getElementById("myModal");
+			var btn = document.getElementById("bibtex");
+			var span = document.getElementsByClassName("close")[0];
+
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
+			
+		  <br><hr><br>
+		  
+  		  <table align=center width=900px>
+  			  <tr>
+  	              <td width=250px>
+  					<center>
+  	                	<img class="rounded" src = "cvpr2019webpage/cvpr19retarget.png" height="240px"></img><br>
+					</center>
+  	              </td>
+                </tr>
+  	              <td width=250px>
+  					<center>
+  	                	<span style="font-size:15px"><i>Retargeting results from 2D human face(s) to 3D character(s) using our approach. These examples are screenshots taken during live performance capture experiments conducted on CPU on a regular PC with a webcam. More examples from our test sets are shown below.</i>
+						<p><br><span style="font-size: 15px"><b>Abstract</b></span>
+					</center>
+  	              </td>
+			  <tr>
+			  
+	  		  	<td>
+		<p align="justify"><br> Facial motion retargeting is an important problem in both computer graphics and vision, which involves capturing the performance of a human face and transferring it to another 3D character.
+		Learning 3D morphable model (3DMM) parameters from 2D face images using convolutional neural networks is common in 2D face alignment, 3D face reconstruction etc.
+		However, existing methods either require an additional face detection step before retargeting or use a cascade of separate networks to perform detection followed by retargeting in a sequence.
+		In this paper, we present a single end-to-end network to jointly predict the bounding box locations and 3DMM parameters for multiple faces.
+		First, we design a novel multitask learning framework that learns a disentangled representation of 3DMM parameters for a single face.
+		Then, we leverage the trained single face model to generate ground truth 3DMM parameters for multiple faces to train another network that performs joint face detection and motion retargeting for images with multiple faces.
+		Experimental results show that our joint detection and retargeting network has high face detection accuracy and is robust to extreme expressions and poses while being faster than state-of-the-art methods.</p>
+				</td>
+	  		  </tr>
+
+  		  </table>
+
+	  <!-- TRY THE DEMO 
+ 		<center><h1>Try the Interactive Demo</h1></center>
+
+ 		  <br>
+
+  		  <table align=center width=1000px>
+  			  <tr>
+  	              <td align=center width=175px>
+  					<center>
+						  <td><a href='http://demos.algorithmia.com/colorize-photos/'><img class="round" style="height:400px" src="./resources/images/algorithmia.png"/></a></td>
+	  		  		</center>
+	  		  </tr>
+		  </table>
+
+  		  <table align=center width=100px>
+			  <tr><center> <br>
+				<span style="font-size:28px"><a href='http://demos.algorithmia.com/colorize-photos/'>[Algorithmia]</a> Demo</span></span><i></i>
+				<!-- <br><br> -->
+				<!-- <span style="font-size:18px"></a>Please contact the corresponding author at <b>rich.zhang at eecs.berkeley.edu</b> with any examples you would like to share.</span> -->
+			<!--  </center></tr>
+		  </table>
+      	  <br>
+		  <hr>-->
+
+	  <!-- NETWORK ARCHITECTURE, TRY THE MODEL -->
+ 		<!--<center><h1>Try our code</h1></center>
+  		  <table align=center width=1000px>
+  			  <tr>
+  	              <td align=center width=750px>
+  					<center>
+						  <td><a href='https://github.com/richzhang/colorization'><img class="round" style="height:275px" src="./resources/images/net_diagram.jpg"/></a></td>
+	  		  		</center>
+			  </tr>
+		  </table>-->
+
+  		  <!--<table align=center width=800px>
+			  <tr><center> <br>-->
+				<!-- <span style="font-size:28px">Code coming soon!</span></i>	-->
+				<!--<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/colorization'>[GitHub]</a> Demo -->
+
+				<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caffe&nbsp;<a href="http://www.eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_deploy_v0.prototxt">[Prototxt]</a>&nbsp;<a href="https://www.dropbox.com/s/8iq5wm4ton5gwe1/colorization_release_v0.caffemodel">[Model 129MB]--></span></span><i></i>
+				<!--<span style="font-size:28px"></a></span>
+			  <br>
+			  </center></tr>
+		  </table>-->
+
+<!-- <a href="http://www.eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_release_v0.caffemodel">[Model 129MB]</span> -->
+      	  <!-- <br>
+		  <hr> -->
+
+  		  <!-- <table align=center width=550px> 
+  		  <table align=center width=600px>
+	 		<center><h1>Paper and Supplementary Material</h1></center>
+  			  <tr>-->
+  	              <!--<td width=300px align=left>-->
+  	              <!-- <a href="http://arxiv.org/pdf/1603.08511.pdf"> 
+				  <td><a target="_blank" href="https://arxiv.org/pdf/1902.10744.pdf"><img class="layered-paper" style="height:100px" src="https://homes.cs.washington.edu/~bindita/images/cvpr2019_pdfthumbnail.png"/></a></td>
+				  <td><span style="font-size:14pt">B. Chaudhuri, N. Vesdapunt, B. Wang<br><br>
+				  Joint Face Detection and Facial Motion Retargeting for Multiple Faces<br><br>
+				  In <i>CVPR</i>, 2019 &nbsp;(hosted on <a target="_blank" href="https://arxiv.org/abs/1902.10744">arXiv</a>)</a>
+				  <!-- <td><span style="font-size:14pt">Zhang, Isola, Efros. Colorful Image Colorization. In ECCV, 2016. (hosted on arXiv) -->
+				  <!-- <span style="font-size:14pt"><br><b>Primary revisions in v2</b>
+				  <span style="font-size:10pt"><br> &bull; ECCV 2016 Camera Ready
+				  <span style="font-size:10pt"><br> &bull; Self-supervision/representation learning experiments (see <b>Section 3.2</b>) -->
+				  <!-- <br> &bull; Loss function comparisons, with all models re-trained from scratch (see <b>Table 1</b>) 
+				  </span>
+				  </td>
+  	              </td>
+              </tr>
+  		  </table>
+		  <br><br> -->
+
+		  <!-- <br> -->
+<!--   		  <table align=center width=200px>
+			  <tr>
+				  <td><span style="font-size:11pt"><a href="http://arxiv.org/pdf/1603.08511v1.pdf">Previous version [v1] [10MB]</a></td>
+				  <td><span style="font-size:12pt"><a href="./resources/supp.pdf">Additional details [v1] [1MB]</a></td>
+			  </tr>
+			  <tr>
+				  <td><span style="font-size:11pt"><a href="./resources/supp.pdf">Additional details [v1] [1MB]</a></td>
+			  </tr>
+		  </table> 
+
+		  <table align=center width=600px>
+			  <tr>
+				  <td><span style="font-size:14pt"><center>
+				  	<a target="_blank" href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chaudhuri_Joint_Face_Detection_and_Facial_Motion_Retargeting_for_Multiple_Faces_CVPR_2019_paper.pdf">[PDF]</a> &nbsp;&nbsp; <a target="_blank" href="https://homes.cs.washington.edu/~bindita/cvpr2019webpage/multifaceretargeting_supp.pdf">[Supplementary]</a> &nbsp;&nbsp; <a target="_blank" href="https://homes.cs.washington.edu/~bindita/cvpr2019webpage/multifaceretargeting_poster.pdf">[Poster]</a> &nbsp;&nbsp; <a target="_blank" href="https://homes.cs.washington.edu/~bindita/papers/MultiFaceRetarget_CVPR.bib">[Bibtex]</a>
+  	              </center></td>
+              </tr>
+  		  </table>-->
+
+	    <br><hr>  	  	
+  	  	<center><h1>Results for Images</h1>
+		<p align="justify">The results here show the rendered 3DMM with the 3DMM parameters predicted by our networks for single face and multi-face images. During retargeting, we only transfer the expression and rotation parameters to the 3D characters as shown in the teaser image at the top of this page.
+		In the paper, we have demonstrated the ability of our approach to disentangle these parameters from the other parameters, resulting in accurate retargeted facial motion on 3D characters.</p><br>
+		<center>
+			<a target="_blank" href="https://homes.cs.washington.edu/~bindita/cvpr2019webpage/singlefaceresults.png"><img class="rounded" src = "cvpr2019webpage/singlefaceresults.png" height="250px"></img></href></a><br>
+		</center>
+		<center>
+			<span style="font-size:17.5px"><i>Results for single face images using our multi-scale single face retargeting network. Top row: input images, bottom row: predicted 3DMM parameters rendered on top of the input images.</i>
+		</center>
+		<br><br>		
+		<center>
+			<a target="_blank" href="https://homes.cs.washington.edu/~bindita/cvpr2019webpage/multifaceresults.png"><img class="rounded" src = "cvpr2019webpage/multifaceresults.png" height="290px"></img></href></a><br>
+		</center>
+		<center>
+			<span style="font-size:17.5px"><i>Results for images with multiple faces using our multi-scale multi-face retargeting network. Top row: input images with predicted face bounding boxes in green rectangles, bottom row: predicted 3DMM parameters rendered on top of each face in the input images.</i>
+		</center>
+		<br><br>
+		<hr>
+		<center><h1>Results for Videos</h1>
+		<iframe width="680" height="400" src="cvpr2019webpage/cvpr19video.mp4" style="border:none;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br><br>
+		<hr>
+		  	
+  		  <table align=center width=1100px>
+  			  <tr>
+  	              <td width=400px>
+	  		  <center><h1>Acknowledgements</h1></center>
+	  		  <p align="justify">We would like to thank Pai Zhang, Muscle Wu, Xiang Yan, Zeyu Chen and other members of the Visual Intelligence Group at <a target="_blank" href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai/">Microsoft Research AI</a> for their help with the project. We would also like to thank Linda Shapiro, Alex Colburn and Barbara Mones from <a target="_blank" href="https://grail.cs.washington.edu/">UW Graphics and Imaging Laboratory</a> for their valuable discussions.
+				Thanks to <a target="_blank" href="https://github.com/experiencor/keras-yolo2">https://github.com/experiencor/keras-yolo2</a> for sharing their code and to <a target="_blank" href="https://richzhang.github.io/colorization/">https://richzhang.github.io/colorization/</a> for this webpage template.
+			
+			</p>
+		</td>
+			 </tr>
+		</table>
+
+  		  
+
+		<br><br>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75863369-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+              
+</body>
+</html>
+ 
