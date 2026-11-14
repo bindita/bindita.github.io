@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Bindita Chaudhuri"
+title                    : "Xing Liu 刘行"
 title_separator          : "-"
-name                     : &name "Bindita Chaudhuri"
+name                     : &name "Xing liu"
 description              : &description "Welcome to my webpage!"
-url                      : https://bindita.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://xinglliu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "bindita/bindita.github.io"
+repository               : "XingLLiu/XingLLiu.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -57,8 +57,8 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : #
-  facebook              : "bindita.chaudhuri"
+  username               : &xingliu97
+  facebook:
   username               :
   app_id                 :
   publisher              :
@@ -80,36 +80,36 @@ analytics:
 
 # Site Author
 author:
-  name             : "Bindita Chaudhuri"
-  avatar           : "bindita.jpg"
-  bio              : "Senior Applied Research Scientist"
-  location         : "Austin, TX"
+  name             : "Xing Liu"
+  avatar           : "profile_nanjing.png"
+  bio              : "PhD student of Statistics at Imperial College London"
+  location         : "London, UK"
   employer         :
   pubmed           : #
-  googlescholar    : "https://scholar.google.com/citations?user=I-J7QXsAAAAJ&hl=en"
-  email            : "bindita91@gmail.com"
+  googlescholar    : "https://scholar.google.com/citations?user=_s0VPfUAAAAJ&hl=en"
+  # email            : ""
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://sites.google.com/site/binditachaudhuri/"
+  uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "bindita"
+  github           : "XingLLiu"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "binditachaudhuri"
+  linkedin         : "xingliu97/"
   orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : # 
+  twitter          : "@xingliu97"
   vine             :
   weibo            :
   xing             :
@@ -129,6 +129,7 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
+  - CHANGELOG
   - Capfile
   - Gemfile
   - Gruntfile.js

@@ -8,18 +8,63 @@ redirect_from:
   - /main.html
 ---
 
-Hello! I am a Senior Applied Research Scientist at [Flawless AI](https://flawlessai.com/) working on cutting-edge generative AI technology for filmmaking. Previously I was a Research Scientist in the XR Tech team at Meta Reality Labs working on AI algorithms for different immersive AR/VR/MR applications.
+Hi there! My name is Xing ([pronunciation](https://translate.google.co.uk/?sl=zh-CN&tl=en&text=%E8%A1%8C&op=translate); similar to "H'sing"). I am a Data Scientist at [QuantCo](https://www.quantco.com/), where my work involves building statistical models for insurance pricing. 
 
-My research interests are in the fields of Computer Vision (generative AI), Computer Graphics (3D humans/perception) and Deep Learning, focusing on high-resolution video synthesis and photorealistic 3D human modeling. My PhD thesis was on human facial expression modeling using deep learning frameworks and real-time facial motion retargeting from 2D images to 3D characters. During my PhD, I also got the opportunity to work on a variety of exciting projects as a research intern at [Microsoft Research](https://www.microsoft.com/en-us/research/), [Facebook Reality Labs Research](https://tech.fb.com/ar-vr/) and [Intel Labs](https://www.intel.com/content/www/us/en/research/overview.html).
+Previously, I finished my PhD in Statistics at Imperial College London. I was in the [EPSRC CDT in Modern Statistics and Statistical Machine Learning at Imperial and Oxford](https://statml.io/) from 2020 to 2024, and I was advised by Professor [Axel Gandy](https://wwwf.imperial.ac.uk/~agandy/) and Dr [Andrew Duncan](http://wwwf.imperial.ac.uk/~aduncan/). I was also a visiting student to the [Fundamentals of Statistical Machine Learning](https://fsml-ucl.github.io/) research group at UCL from autumn 2023 to summer 2024.
+
+My research interests lie in the intersection of kernel methods and computational statistics. Specifically, I am exploring the applications of Kernelized Stein Discrepancy in various fields including hypothesis testing, particle-based inference and parameter estimation. 
 
 ## Education 
-:mortar_board: Ph.D., Computer Science, 2016-2021, <span class="grey">University of Washington</span> \
-:mortar_board: M.Tech., Electrical Engineering, 2014-2016, <span class="grey">Indian Institute of Technology</span> \
-:mortar_board: B.E., Electronics and Telecommunication Engineering, 2010-2014, <span class="grey">Jadavpur University</span>
+:mortar_board: PhD in Modern Statistics and Statistical Machine Learning, 2020-2024, <span class="grey">Imperial College London</span> \
+:mortar_board: MASt (Part III) in Mathematical Statistics, 2019-2020, <span class="grey">University of Cambridge</span> \
+:mortar_board: BSc in Mathematics with Statistics, 2016-2019, <span class="grey">Imperial College London</span>
+
+## Resources
+[Here](https://github.com/XingLLiu/ImperialCollegePosterTemplate) is an **unofficial** LaTex poster template for maths/stats projects with a Imperial College theme. See the links therein for references.
+
+## Teaching
+I am/was a Teaching Assistant for the following courses:
+- Autumn 2023: *M.Sc. in Statistics Orientation Week*. Led by Dr [Oliver Ratmann](https://www.imperial.ac.uk/people/oliver.ratmann05).
+- Spring 2023: *Mathematical Foundations of Machine Learning*. Lectured by Dr [Anastasia Borovykh](https://abrvkh.github.io/).
+- Spring 2022: *Exploratory Data Analysis and Visualisation*. Lectured by Dr [James Martin](https://www.imperial.ac.uk/people/james.martin).
+- Autumn 2021: *Applicable Maths*. Lectured by Dr [James Martin](https://www.imperial.ac.uk/people/james.martin).
 
 ## News
-- [2025] Our paper [Data Fusion with Distributional Equivalence Test-then-pool](https://arxiv.org/abs/2603.11867) is accepted to ICCV.
+- [03/2026] Our new preprint [Data Fusion with Distributional Equivalence Test-then-pool](https://arxiv.org/abs/2603.11867) is out! This is led by [Linying Yang](https://linyingyang.github.io/) and in collaboration with Prof [Robin Evans](https://rje42.github.io/).
 
-- [Mar 2024] I got promoted to Senior Applied Scientist / Manager at Flawless AI. Looking forward to managing a team 
+- [03/2026] Our new preprint [Kernel Tests of Equivalence](https://arxiv.org/abs/2603.10886) is out! This is a joint work with Prof [Axel Gandy](https://wwwf.imperial.ac.uk/~agandy/).
 
-- [Oct 2023] I joined Flawless AI as an Applied Scientist. Excited to work on !
+- [10/2025] Our paper *On the Robustness of Kernel Goodness-of-Fit Tests*, coauthored with Professor [François-Xavier Briol](https://fxbriol.github.io/), has been accepted to JMLR. [Link](https://jmlr.org/papers/v26/24-1365.html).
+
+- [12/2024] I joined [QuantCo](https://www.quantco.com/) as a full-time Data Scientist. Excited to explore the more applied side of machine learning in this role!
+
+- [12/2024] I successfully defended my PhD thesis! A huge thank-you to my examiners Dr. [Nikolas Kantas](https://www.ma.imperial.ac.uk/~nkantas/) and Prof. [Chris Oates](https://oates.work/) for the insightful discussions during the viva!
+
+- [08/2024] From 12th to 16th August 2024, I will attend the 11th Bernoulli-IMS World Congress in Probability and Statistics, and present our recent preprint [On the Robustness of Kernel Goodness-of-Fit Tests](https://www.arxiv.org/abs/2408.05854), a joint work with Dr [François-Xavier Briol](https://fxbriol.github.io/). Come and join our session on Wednesday 14th at 11am if you are interested!
+
+- [08/2024] Our new preprint [On the Robustness of Kernel Goodness-of-Fit Tests](https://www.arxiv.org/abs/2408.05854) is out! This is a joint work with Dr [François-Xavier Briol](https://fxbriol.github.io/).
+
+- [12/2023] From 17th to 21st, I will attend the 2023 IMS International Conference on Statistics and Data Science (ICSDS) in Lisbon, where I will give a contributed talk on our COLT paper [A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing](https://proceedings.mlr.press/v195/huang23a.html).
+
+- [10/2023] For this academic year, I will be visiting the [Fundamentals of Statistical Machine Learning](https://fsml-ucl.github.io/) research group, co-led by Dr [François-Xavier Briol](https://fxbriol.github.io/) and Dr [Jeremias Knoblauch](https://jeremiasknoblauch.github.io/). Looking forward to an engaging experience with the amazing researchers in the group!
+
+- [10/2023] Starting from October 2023, I will become an [Enrichment Student](https://www.turing.ac.uk/work-turing/studentships/enrichment) at the [Alan Turing Institute](https://www.turing.ac.uk/), where I will join the Turing's research community for six months to broaden my research. Please do not hesitate to reach out if you are interested in collaboration!
+
+- [05/2023] Our paper [A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing](https://proceedings.mlr.press/v195/huang23a.html) has been accepted by COLT 2023.
+
+- [04/2023] Our paper [Using Perturbation to Improve Goodness-of-Fit Tests based on Kernelized Stein Discrepancy](https://arxiv.org/abs/2304.14762) has been accepted by ICML 2023.
+
+- [09/2022] I finished my internship at [Meta](https://research.facebook.com/), where I worked on multi-task active learning methods for e-commerce.
+
+- [01/2022] Our paper [Grassmann Stein Variational Gradient Descent](https://proceedings.mlr.press/v151/liu22a.html) has been accepted by AISTATS 2022.
+
+<!-- ## Contact
+### Email
+[firstname].[lastname]16 [at] imperial.ac.uk
+
+### Address
+Office 617 \
+Huxley Building \
+180 Queen's Gate, South Kensington \
+London SW7 2AZ \
+UK -->
