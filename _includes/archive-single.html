@@ -35,7 +35,7 @@
     </h2>
     
     {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
         {% if post.collection == 'teaching' %}
@@ -47,17 +47,18 @@
         {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
-    <div class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</div>
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
-    <div class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}<p><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink">Read more</a></strong></p></div>
+    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
-    {% include /components/citations.html
-        citation=post.citation
-        paperurl=post.paperurl
-        slidesurl=post.slidesurl
-        bibtexurl=post.bibtexurl
-    %}    
+    {% if post.citation and post.paperurl %}
+      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
+    {% elsif post.citation %}
+      <p>Recommended citation: {{ post.citation }} </p>
+    {% elsif post.paperurl %}
+      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
+    {% endif %}
 
   </article>
 </div>
