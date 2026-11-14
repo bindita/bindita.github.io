@@ -1,28 +1,13 @@
-# main links links
+# main links
 main:
-  - title: "Research"
+  - title: "Work Experience"
     url: /research/
 
-  - title: "About Me"
-    url: /about_me/
+  - title: "Publications"
+    url: /research/
 
-  - title: "Imperial Maths Competition"
-    url: /imperial_maths_competition/
+  - title: "Projects"
+    url: /research/
 
-  - title: "Contact"
-    url: /contact/
-
-#  - title: "Talks"
-#    url: /talks/    
-
-#  - title: "Teaching"
-#    url: /teaching/    
-    
-#  - title: "Portfolio"
-#    url: /portfolio/
-        
-#  - title: "Blog Posts"
-#    url: /year-archive/
-
-#  - title: "Guide"
-#    url: /markdown/
+  # - title: "CV"
+  #   url: /cv/
