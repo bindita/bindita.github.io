@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Bindita Chaudhuri"
 title_separator          : "-"
-name                     : &name "Xing liu"
+name                     : &name "Bindita Chaudhuri"
 description              : &description "Welcome to my webpage!"
 url                      : https://bindita.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -58,7 +58,7 @@ yandex_site_verification :
 # Social Sharing
 twitter:
   username               : #
-  facebook:
+  facebook              : "bindita.chaudhuri"
   username               :
   app_id                 :
   publisher              :
@@ -81,15 +81,15 @@ analytics:
 # Site Author
 author:
   name             : "Bindita Chaudhuri"
-  avatar           : "profile_nanjing.png"
+  avatar           : "bindita.jpg"
   bio              : "Senior Applied Research Scientist"
   location         : "Austin, TX"
   employer         :
   pubmed           : #
-  googlescholar    : "https://scholar.google.com/citations?user=_s0VPfUAAAAJ&hl=en"
-  # email            : ""
+  googlescholar    : "https://scholar.google.com/citations?user=I-J7QXsAAAAJ&hl=en"
+  email            : "bindita91@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  uri              : "https://sites.google.com/site/binditachaudhuri/"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "bindita.chaudhuri"
+  linkedin         : "binditachaudhuri"
   orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
