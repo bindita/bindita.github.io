@@ -54,16 +54,16 @@
   padding: 2px 5px;
   font-size: 12px; /* Slightly smaller so button labels fit cleanly */
   text-decoration: none !important;
-  background-color: #0066cc;
-  color: #fff;
-  /* color: #0066cc; */
+  /* background-color: #0066cc;
+  color: #fff; */
+  color: #0066cc;
   border: 1px solid #0066cc;
   border-radius: 4px;
 }
 
 .publication-links a:hover {
-  background-color: #fff;
-  color: #0066cc;
+  background-color: #0066cc;
+  color: #fff;
 }
 
 /* Responsive: Stack image above text on narrow screens */
