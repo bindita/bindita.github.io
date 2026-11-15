@@ -1,0 +1,215 @@
+.publication-list {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+.publication-list p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.publication-item {
+  display: flex;
+  align-items: flex-start; /* Aligns image and text to the top */
+  gap: 20px;               /* Space between the image and the text */
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.publication-image {
+  flex: 0 0 150px;         /* Prevents image from shrinking or growing; sets fixed width */
+}
+
+.publication-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.publication-details {
+  flex: 1;                 /* Allows text container to fill the remaining space */
+}
+
+.publication-title {
+  margin: 0 0 8px 0;
+  font-size: 18px; /* Slightly larger than 16px to stand out as a title */
+  color: #222;
+}
+
+.publication-authors {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.publication-venue {
+  margin: 0 0 12px 0;
+  font-style: italic;
+  font-size: 16px;
+  color: #777;
+}
+
+.publication-links a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 4px 10px;
+  font-size: 14px; /* Slightly smaller so button labels fit cleanly */
+  text-decoration: none;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+  border-radius: 4px;
+}
+
+.publication-links a:hover {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+/* Responsive: Stack image above text on narrow screens */
+@media (max-width: 600px) {
+  .publication-item {
+    flex-direction: column;
+  }
+  .publication-image {
+    flex: none;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Modal Background Overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Pop-up Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 12% auto;
+  padding: 20px 25px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  width: 90%;
+  max-width: 650px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Close 'X' Button */
+.close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+/* BibTeX Code Formatting */
+.monospace {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px; /* Matches your 16px requirement */
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-top: 15px;
+  clear: both;
+}
+
+/* Work Experience Section */
+.experience-list,
+.experience-list p,
+.experience-list li {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.experience-logo {
+  flex: 0 0 65px; /* Small fixed width for company/university logos */
+}
+
+.experience-logo img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain; /* Prevents wide or tall logos from stretching */
+  border-radius: 6px;
+  display: block;
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 4px;
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between; /* Pushes role left and dates right */
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.experience-role {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.experience-date {
+  font-size: 15px;
+  color: #777;
+}
+
+.experience-company {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.experience-bullets {
+  margin: 0;
+  padding-left: 20px;
+  color: #444;
+}
+
+.experience-bullets li {
+  margin-bottom: 4px;
+}
+
+/* Responsive adjustment for narrow screens */
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
