@@ -15,11 +15,11 @@
 
 .publication-image {
   flex: 0 0 150px;         /* Prevents image from shrinking or growing; sets fixed width */
+  display: flex;
+  justify-content: center !important;
 }
 
 .publication-image img {
-  width: 100%;
-  height: auto;
   border-radius: 1px;
   display: block;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -164,7 +164,7 @@
   display: block;
   background-color: #fff;
   border: 1px solid #eee;
-  padding: 2px;
+  padding: 4px;
 }
 
 .experience-details {
