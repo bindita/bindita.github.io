@@ -1,18 +1,19 @@
 .publication-list {
-  max-width: 800px;
+  width: 100%;
+  max-width: none; /* Removes the 800px cap */
   margin: 0 auto;
   font-family: Arial, sans-serif;
 }
 .publication-list p {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 .publication-item {
   display: flex;
   align-items: flex-start; /* Aligns image and text to the top */
-  gap: 20px;               /* Space between the image and the text */
-  padding: 20px 0;
+  gap: 15px;               /* Space between the image and the text */
+  padding: 10px 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -23,7 +24,7 @@
 .publication-image img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 1px;
   display: block;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -33,29 +34,29 @@
 }
 
 .publication-title {
-  margin: 0 0 8px 0;
-  font-size: 18px; /* Slightly larger than 16px to stand out as a title */
+  margin: 0 0 4px 0;
+  font-size: 16px;
   color: #222;
 }
 
 .publication-authors {
-  margin: 0 0 8px 0;
-  font-size: 16px;
+  margin: 0 0 3px 0;
+  font-size: 12px;
   color: #555;
 }
 
 .publication-venue {
-  margin: 0 0 12px 0;
+  margin: 0 0 5px 0;
   font-style: italic;
-  font-size: 16px;
+  font-size: 12px;
   color: #777;
 }
 
 .publication-links a {
   display: inline-block;
-  margin-right: 10px;
-  padding: 4px 10px;
-  font-size: 14px; /* Slightly smaller so button labels fit cleanly */
+  margin-right: 7px;
+  padding: 2px 8px;
+  font-size: 12px; /* Slightly smaller so button labels fit cleanly */
   text-decoration: none;
   color: #0066cc;
   border: 1px solid #0066cc;
@@ -122,31 +123,35 @@
 /* BibTeX Code Formatting */
 .monospace {
   font-family: "Courier New", Courier, monospace;
-  font-size: 16px; /* Matches your 16px requirement */
+  font-size: 15px; /* Matches your 15px requirement */
   background-color: #f4f4f4;
   padding: 15px;
   border-radius: 4px;
   overflow-x: auto;
   margin-top: 15px;
   clear: both;
+  /* Forces long BibTeX lines (like titles or author lists) to wrap inside the box */
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 /* Work Experience Section */
 .experience-list,
 .experience-list p,
 .experience-list li {
-  max-width: 800px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.25;
 }
 
 .experience-item {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  padding: 18px 0;
+  gap: 16px;
+  padding: 16px 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -162,7 +167,7 @@
   display: block;
   background-color: #fff;
   border: 1px solid #eee;
-  padding: 4px;
+  padding: 2px;
 }
 
 .experience-details {
